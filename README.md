@@ -32,11 +32,11 @@ gulp
 Now we can configure our routes using a test-first approach:
 ```sh
 $ register
-curl -X POST -d "username=admin&password=admin" http://localhost:3000/auth/register
+curl -X POST -d "username=admin&password=admin" https://ginga-login.herokuapp.com/auth/register
 
 $ login
-curl -X POST -d "username=admin&password=admin" http://localhost:3000/auth/login
+curl -X POST -d "username=admin&password=admin" https://ginga-login.herokuapp.com/auth/login
 
 $ user
-curl -X GET -H "Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MDg0MzQ5MzEsImlhdCI6MTUwNzIyODkzMSwic3ViIjoyfQ.ePbnNS8jIvBXqv97gyUh_9llVy3br9dH7ft4xDoq7OA" http://localhost:3000/auth/user
+curl -X GET -H "Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MDg0MzQ5MzEsImlhdCI6MTUwNzIyODkzMSwic3ViIjoyfQ.ePbnNS8jIvBXqv97gyUh_9llVy3br9dH7ft4xDoq7OA" https://ginga-login.herokuapp.com/auth/user
 ```
