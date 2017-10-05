@@ -4,7 +4,7 @@ const chai = require('chai');
 const should = chai.should();
 const bcrypt = require('bcryptjs');
 
-const authHelpers = require('../../src/server/auth/_helpers');
+const authHelpers = require('../../src/auth/_helpers');
 
 describe('auth : helpers', () => {
 

@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 const chai = require('chai');
 const should = chai.should();
 
-const indexController = require('../../src/server/controllers/index');
+const indexController = require('../../src/controllers/index');
 
 describe('controllers : index', () => {
 

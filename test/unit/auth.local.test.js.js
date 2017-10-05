@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 const chai = require('chai');
 const should = chai.should();
 
-const localAuth = require('../../src/server/auth/local');
+const localAuth = require('../../src/auth/local');
 
 describe('auth : local', () => {
 

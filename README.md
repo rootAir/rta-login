@@ -1,16 +1,20 @@
 # ginga-login authentication with Node
 
-# migrations
+## Migrations
 
 First, create two local Postgres databases:
+```sh
 $ psql
-CREATE DATABASE ginga_login;
-CREATE DATABASE ginga_login_test
+$ CREATE DATABASE ginga_login;
+$ CREATE DATABASE ginga_login_test;
+```
 
-## install
+## Install
 
-Install dependencies - `npm install`
-Migrate - `knex migrate:latest --env development`
-Seed - `knex seed:run --env development`
-Run the development server - `gulp`
-Test - `npm test`
+```sh
+$ Install dependencies - `npm install`
+$ Migrate - `knex migrate:latest --env development`
+$ Seed - `knex seed:run --env development`
+$ Test - `npm test`
+$ Run the development server - `gulp`
+```

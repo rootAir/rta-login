@@ -19,7 +19,7 @@ const paths = {
   styles: [
     path.join('src', 'client', 'css', '*.css')
   ],
-  server: path.join('src', 'server', 'server.js')
+  server: path.join('src', 'server.js')
 };
 
 const lrPort = 35729;
