@@ -9,7 +9,7 @@ CREATE DATABASE ginga_login;
 CREATE DATABASE ginga_login_test;
 ```
 
-## Install and test
+## Install
 
 ```sh
 $ Install dependencies
@@ -18,23 +18,25 @@ $ Migrate
 knex migrate:latest --env development
 $ Seed
 knex seed:run --env development
-$ Test
-npm test
 ```
 
-## Run the development server
+## Test and run the development server
 
 ```sh
+npm test
 gulp
-http://localhost:35729/
 ```
 
 ## Route Setup
 
 Now we can configure our routes using a test-first approach:
 ```sh
-/auth/register
-/auth/login
-/auth/logout
-/auth/user
+$ register
+curl -X POST -d "username=admin&password=admin" http://localhost:3000/auth/register
+
+$ login
+curl -X POST -d "username=admin&password=admin" http://localhost:3000/auth/login
+
+$ user
+curl -X GET -H "Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MDg0MzQ5MzEsImlhdCI6MTUwNzIyODkzMSwic3ViIjoyfQ.ePbnNS8jIvBXqv97gyUh_9llVy3br9dH7ft4xDoq7OA" http://localhost:3000/auth/user
 ```
